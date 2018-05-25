@@ -2,7 +2,7 @@
   "name": "postcards",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://hmansoori.github.io/Postcards",
+  "homepage": "http://hmansoori.github.io/Postcard",
   "dependencies": {
     "@google-cloud/storage": "^1.6.0",
     "child-process-promise": "^2.2.1",

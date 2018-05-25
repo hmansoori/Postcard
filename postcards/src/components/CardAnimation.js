@@ -68,6 +68,8 @@ export const Box = styled.div`
   transition: transform 300ms ease-in-out;
   position: absolute;
 
+  width: 240px;
+  height: 310px;
   margin: 50px;
   padding: 20px;
   text-align: center;

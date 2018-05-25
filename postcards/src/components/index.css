@@ -28,8 +28,8 @@ html, body {
 
   }
   .item {
-    width: 240px;
-    height: 310px;
+    width: 240px !important;
+    height: 310px !important;
   }
   .time {
     padding: 10px 0; 
@@ -277,8 +277,8 @@ html, body {
         width: 750px;
     } 
     .item {
-        width: 400px;
-        height: 500px;
+        width: 400px !important;
+        height: 500px !important;
     }
     .message-img {
       object-fit: cover;
@@ -449,8 +449,8 @@ html, body {
         width: 970px; 
     } 
     .item {
-      width: 480px;
-      height: 580px;
+      width: 480px !important;
+      height: 580px !important;
     }
     .message-img {
       object-fit: cover;

@@ -1,0 +1,67 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.example-appear {
+  opacity: 0.01;
+}
+
+.example-appear.example-appear-active {
+  opacity: 1;
+  transition: opacity .5s ease-in;
+}
+
+.example-enter {
+    opacity: 0;
+    /* transform:   translate(-250px,0);
+    transform: translate3d(-250px,0,0); */
+}
+.example-enter.example-enter-active {
+	opacity: 1;
+  transition: opacity 3000ms ease-out;
+	/* transition: opacity 1s ease;
+	transform:   translate(0,0);
+	transform: translate3d(0,0,0);
+	transition-property: transform, opacity;
+	transition-duration: 300ms;
+	transition-timing-function: cubic-bezier(0.175, 0.665, 0.320, 1), linear; */
+}
+.example-leave {
+	opacity: 1;
+	/* transform:   translate(0,0,0);
+	transform: translate3d(0,0,0);
+  transition-property: transform, opacity;
+	transition-duration: 300ms;
+	transition-timing-function: cubic-bezier(0.175, 0.665, 0.320, 1), linear; */
+}
+.example-leave.example-leave-active {
+	opacity: 0;
+  transition: opacity 3000ms ease-out;
+	/* transform:   translate(250px,0);
+	transform: translate3d(250px,0,0); */
+}

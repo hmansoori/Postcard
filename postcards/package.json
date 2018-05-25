@@ -1,0 +1,40 @@
+{
+  "name": "postcards",
+  "version": "0.1.0",
+  "private": true,
+  "homepage": "http://hmansoori.github.io/Postcards",
+  "dependencies": {
+    "@google-cloud/storage": "^1.6.0",
+    "child-process-promise": "^2.2.1",
+    "firebase": "^4.12.1",
+    "moment": "^2.22.0",
+    "momentjs": "^2.0.0",
+    "npm": "^6.0.0",
+    "react": "^16.3.2",
+    "react-addons": "^0.9.1-deprecated",
+    "react-addons-css-transition-group": "^15.6.2",
+    "react-bootstrap": "^0.32.1",
+    "react-burger-menu": "^2.4.4",
+    "react-dom": "^16.3.2",
+    "react-flip-move": "^3.0.1",
+    "react-image-upload": "0.0.1",
+    "react-images-upload": "^1.0.6",
+    "react-router": "^4.2.0",
+    "react-router-dom": "^4.2.2",
+    "react-scripts": "1.1.1",
+    "react-time": "^4.3.0",
+    "styled-components": "^3.2.6"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+  },
+  "devDependencies": {
+    "gh-pages": "^1.1.0",
+    "video.js": "^6.8.0"
+  }
+}

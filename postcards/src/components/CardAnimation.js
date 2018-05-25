@@ -63,13 +63,8 @@ import styled from 'styled-components';
 export const Box = styled.div`
   display: inline-block;
   background: pink;
-  width: 200px;
-  height: 200px;
   transition: transform 300ms ease-in-out;
   position: absolute;
-
-  width: 240px;
-  height: 310px;
   margin: 50px;
   padding: 20px;
   text-align: center;

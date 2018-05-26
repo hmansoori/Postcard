@@ -269,9 +269,7 @@ html, body {
 .handle-with-text {
   margin-top: 10px;
 }
-
 }
-
 
 @media (min-width: 768px) {
     .main-container { 
@@ -466,7 +464,6 @@ html, body {
       height: 415px;
       padding-top: 20px;
       text-align: center;
-      margin: none;
       
     }
     .previewComponent {
@@ -531,8 +528,8 @@ html, body {
     }
 
     .time {
-      padding: 10px 0; 
-      font-size: 16px;
+      padding-top: 10px; 
+      font-size: 18px;
       text-transform: uppercase;
     }
     .rightTransition-leave.rightTransition-leave-active {
@@ -540,21 +537,22 @@ html, body {
       transition: transform 1000ms ease-in-out; */
       /* opacity: 0;
       transition: opacity 100ms ease-out; */
-      transform:   translate(-405px,0);
-      transform: translate3d(-405px,0,0);
+      transform:   translate(-761px,0);
+      transform: translate3d(-761px,0,0);
     }
     .leftTransition-leave.leftTransition-leave-active {
       /* transform: translate(-100%);
       transition: transform 1000ms ease-in-out; */
       /* opacity: 0;
       transition: opacity 3000ms ease-out; */
-      transform:   translate(405px,0);
-      transform: translate3d(405px,0,0);
+      transform:   translate(761px,0);
+      transform: translate3d(761px,0,0);
     }
     .handle {
       float: left;
       margin: auto;
-      padding-left: 10px;
+      
+      font-size: 16px;
     }
     .message-buttons {
       bottom: 0px;
@@ -570,7 +568,7 @@ html, body {
       box-shadow: 10px 5px #006699;
     }
     .btn-default {
-      font-size: 14px;
+      font-size: 18px;
     }
     .message {
       background-color: #e6f2ff;
@@ -578,6 +576,7 @@ html, body {
       margin: auto;
       padding-top: 50px;
       border-radius: 10px;
+      margin-top: 20px;
     }
     .avatar-with-text {
       height: 60px;
@@ -587,6 +586,7 @@ html, body {
     }
     .handle-with-text {
       margin-top: 10px;
+      font-size: 16px;
     }
 
 }
@@ -711,8 +711,6 @@ button.list-group-item {
 	transform: translate3d(200px,0,0);
 } */ 
 
-
-
 /* .caption {
   text-align: left;
   padding: 10px;
@@ -737,11 +735,6 @@ button.list-group-item {
   width: 525px;
   border-radius: 10px;
 } */
-
-.likes {
-  float: right;
-}
-
 
 /* Position and sizing of burger button */
 /* .bm-burger-button {

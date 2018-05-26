@@ -31,7 +31,7 @@ const Navigation = () =>
 
   <Navbar  collapse>
       <Navbar.Header>
-      <a href="/">
+      <a href="https://hmansoori.github.io/Postcards/">
         <Navbar.Brand>
           <img src={logo} alt="logo" class="img-responsive center-block"/>
         </Navbar.Brand>
@@ -53,7 +53,7 @@ const NavigationNonAuth = () =>
 
   <Navbar>
     <Navbar.Header>
-      <a href="/">
+      <a href="https://hmansoori.github.io/Postcards/">
         <Navbar.Brand>
           <img src={logo} alt="logo" class="img-responsive center-block"/>
         </Navbar.Brand>
@@ -62,7 +62,7 @@ const NavigationNonAuth = () =>
 
     </Navbar.Header>
     <Nav pullRight>
-      <li><Link to={routes.LANDING}>Landing</Link></li>
+      <li><a href="https://hmansoori.github.io/Postcards/">Landing</a></li>
       <li><Link to={routes.SIGN_IN}>Sign In</Link></li>
     </Nav>
   </Navbar>

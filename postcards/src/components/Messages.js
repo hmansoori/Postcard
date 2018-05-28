@@ -164,20 +164,20 @@ export class MessageBox extends React.Component {
           <div className="message-buttons">
             <div>
               <DropdownButton class="choice-button text-button" dropup noCaret title="Write a Message">
-                <div>
-                  <Well>
+                <div className="previewComponent">
+                  
                     <form onSelect = {(e) => e.stopPropagation()}>
                       <textarea placeholder="What do you want to say?" value={this.state.post} className="form-control" onChange={(e) => this.updatePost(e)}></textarea>
                       <div className="form-group send-Message">
                         {/* Disable if invalid post length */}
-                        <Button bsStyle="info"
+                        <button className="submitButton"
                           disabled={this.state.post.length === 0}
                           onClick={(e) => this.postMessage(e)} >
                           <i className="fa fa-pencil-square-o" aria-hidden="true"></i> Share
-            </Button>
+            </button>
                       </div>
                     </form>
-                  </Well>
+                  
                 </div>
               </DropdownButton>
               <DropdownButton dropup noCaret title="Post a Photo" class="choice-button photo-button" pullRight>
@@ -322,7 +322,7 @@ export class MessageList extends React.Component {
 <div>
   <div>
       <Row class="message-section">
-      <Col xs={12} xsOffset={0} sm={10} smOffset={2} md={10} mdOffset={2} lg={6} lgOffset={3}>
+      <Col xs={12} xsOffset={0} sm={10} smOffset={2} md={10} mdOffset={2} lg={10} lgOffset={2}>
           {messageItems[this.state.index]}
       </Col>
 
@@ -340,7 +340,7 @@ export class MessageList extends React.Component {
       </Col>*/}
       </Row>
       <Row>
-      <Col xs={12} sm={6} smOffset={2} >
+      <Col xs={12} sm={10} smOffset={2} md={10} mdOffset={2} lg={9} lgOffset={2} >
       <MessageBox groupId = {this.props.groupId} />
       </Col>
 
@@ -471,7 +471,7 @@ class MessageItem extends React.Component {
 
     return (
 
-      <div>
+      <div className="message-section">
         {this.state && this.props.group &&
         <div className="message-container">
           <div className="leftDeck">

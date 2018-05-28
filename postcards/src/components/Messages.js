@@ -165,7 +165,6 @@ export class MessageBox extends React.Component {
             <div>
               <DropdownButton class="choice-button text-button" dropup noCaret title="Write a Message">
                 <div className="previewComponent">
-                  
                     <form onSelect = {(e) => e.stopPropagation()}>
                       <textarea placeholder="What do you want to say?" value={this.state.post} className="form-control" onChange={(e) => this.updatePost(e)}></textarea>
                       <div className="form-group send-Message">
@@ -173,7 +172,7 @@ export class MessageBox extends React.Component {
                         <button className="submitButton"
                           disabled={this.state.post.length === 0}
                           onClick={(e) => this.postMessage(e)} >
-                          <i className="fa fa-pencil-square-o" aria-hidden="true"></i> Share
+                          <i className="fa fa-pencil-square-o" aria-hidden="true"></i> Share Your Message
             </button>
                       </div>
                     </form>
@@ -182,6 +181,9 @@ export class MessageBox extends React.Component {
               </DropdownButton>
               <DropdownButton dropup noCaret title="Post a Photo" class="choice-button photo-button" pullRight>
                 <div className="previewComponent">
+                <div className="imgPreview">
+                    {$imagePreview}
+                  </div>
                   <form onSubmit={(e) => this._handleSubmit(e)} onSelect = {(e) => e.stopPropagation()}>
                     <input className="fileInput"
                       type="file"
@@ -192,9 +194,7 @@ export class MessageBox extends React.Component {
                       type="submit"
                       onClick={(e) => this._handleSubmitImage(e)}>Upload Image</button>
                   </form>
-                  <div className="imgPreview">
-                    {$imagePreview}
-                  </div>
+                  
                 </div>
               </DropdownButton>
               <DropdownButton dropup noCaret title="Share a Video" class="choice-button video-button" id="video" pullRight>
@@ -210,7 +210,7 @@ export class MessageBox extends React.Component {
                     <textarea placeholder="Add a caption" value={this.state.videoCaption} onSelect = {(e) => e.stopPropagation()} onChange={(e) => this.updateVideoCaption(e)} className="form-control"></textarea>
                     <button className="submitButton"
                       type="submit"
-                      onClick={(e) => this._handleSubmitVideo(e)}>Upload An .mp4 File</button>
+                      onClick={(e) => this._handleSubmitVideo(e)}>Upload Video</button>
                   </form>
                   
                 </div>
@@ -322,7 +322,7 @@ export class MessageList extends React.Component {
 <div>
   <div>
       <Row class="message-section">
-      <Col xs={12} xsOffset={0} sm={10} smOffset={2} md={10} mdOffset={2} lg={10} lgOffset={2}>
+      <Col xs={12} xsOffset={0} sm={10} smOffset={2} md={10} mdOffset={2} lg={9} lgOffset={3}>
           {messageItems[this.state.index]}
       </Col>
 

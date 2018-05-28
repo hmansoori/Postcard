@@ -211,16 +211,6 @@ html, body {
     /* transform:   translate(-250px,0);
     transform: translate3d(-250px,0,0); */
 }
-.rightTransition-enter.rightTransition-enter-active {
-	opacity: 1;
-  transition: opacity 100ms ease-out;
-	/* transition: opacity 1s ease;
-	transform:   translate(0,0);
-	transform: translate3d(0,0,0);
-	transition-property: transform, opacity;
-	transition-duration: 300ms;
-	transition-timing-function: cubic-bezier(0.175, 0.665, 0.320, 1), linear; */
-}
 
 .rightTransition-leave {
 	opacity: 1;
@@ -243,16 +233,6 @@ html, body {
     opacity: 0;
     /* transform:   translate(-250px,0);
     transform: translate3d(-250px,0,0); */
-}
-.leftTransition-enter.leftTransition-enter-active {
-	opacity: 1;
-  transition: opacity 100ms ease-out;
-	/* transition: opacity 1s ease;
-	transform:   translate(0,0);
-	transform: translate3d(0,0,0);
-	transition-property: transform, opacity;
-	transition-duration: 300ms;
-	transition-timing-function: cubic-bezier(0.175, 0.665, 0.320, 1), linear; */
 }
 
 .leftTransition-leave {
@@ -292,6 +272,22 @@ html, body {
 }
 .handle-with-text {
   margin-top: 10px;
+}
+button.list-group-item {
+  border: none;
+  text-align: center;
+}
+
+.list-group-item {
+  border: none;
+  text-align: center;
+}
+.list-group {
+  border-radius: 20px;
+}
+.Group-nav {
+  background-color: white;
+  text-align: center;
 }
 }
 
@@ -497,6 +493,23 @@ html, body {
       height: 200px;
       width: 200px;
     }
+    button.list-group-item {
+      border: none;
+      text-align: center;
+    }
+    
+    .list-group-item {
+      border: none;
+      text-align: center;
+      font-size: 14px;
+    }
+    .list-group {
+      border-radius: 20px;
+    }
+    .Group-nav {
+      background-color: white;
+      text-align: center;
+    }
   }
 
 
@@ -560,7 +573,7 @@ html, body {
       width: 80px;
       height: 200px;
       left: 0px;
-      top: 100px;
+      top: 250px;
     
     }
   
@@ -676,9 +689,6 @@ html, body {
       text-align: center;
       
     }
-    .message{
-      height: 480px;
-    }
     .message-buttons {
       bottom: 0px;
       width: 1000px;
@@ -711,11 +721,18 @@ html, body {
       width: 100px;
       height: 260px;
       left: 0px;
-      top: 100px;
+      top: 300px;
     
     }
+    .message {
+      padding-top:60px;
+      padding-left: 10px;
+      padding-right: 10px;
+      font-size: 34px;
+      height: 480px;
+    }
     .message-section{
-      padding-top: 50px;
+      padding-top: 40px;
     }
     .time {
       font-size: 20px;
@@ -758,39 +775,67 @@ html, body {
       transition: transform 1000ms ease-in-out; */
       /* opacity: 0;
       transition: opacity 100ms ease-out; */
-      transform:   translate(-761px,0);
-      transform: translate3d(-761px,0,0);
+      transform:   translate(-829px,0);
+      transform: translate3d(-829px,0,0);
     }
     .leftTransition-leave.leftTransition-leave-active {
       /* transform: translate(-100%);
       transition: transform 1000ms ease-in-out; */
       /* opacity: 0;
       transition: opacity 3000ms ease-out; */
-      transform:   translate(761px,0);
-      transform: translate3d(761px,0,0);
+      transform:   translate(829px,0);
+      transform: translate3d(829px,0,0);
+    }
+    .navbar-brand{
+      height: 70px;
+      width: 70px;
+    }
+    button.list-group-item {
+      border: none;
+      text-align: center;
+    }
+    
+    .list-group-item {
+      border: none;
+      text-align: center;
+      font-size: 16px;
+    }
+    .list-group {
+      border-radius: 20px;
+    }
+    .Group-nav {
+      background-color: white;
+      text-align: center;
+    }
+    .previewComponent {
+      padding: 30px;
+      border: none;
+      font-size: 18px;
+      width: 370px;
+    }
+
+    
+    .video-js {
+      position: relative !important;
+      width: 100% !important;
+      height: 100% !important;
+    }
+    .dropdown-menu{
+      width: 420px;
+    }
+    .img-preview {
+      object-fit: cover;
+      overflow: hidden;
+      max-width: 100%;
+      height: 310px;
+      width: 310px;
+    }
+    .submitButton{
+      margin-top: 10px;
+      margin-bottom: 10px;
     }
 }
 
-button.list-group-item:active {
-  color: orange;
-}
-
-button.list-group-item {
-  border: none;
-  text-align: center;
-}
-
-.list-group-item {
-  border: none;
-  text-align: center;
-}
-.list-group {
-  border-radius: 20px;
-}
-.Group-nav {
-  background-color: white;
-  text-align: center;
-}
 .signupForm {
   position: absolute;
   margin: auto;
@@ -825,7 +870,7 @@ button.list-group-item {
 }
 .rightTransition-enter.rightTransition-enter-active {
 	opacity: 1;
-  transition: opacity 30ms ease-out;
+  transition: opacity 70ms ease-out;
 	/* transition: opacity 1s ease;
 	transform:   translate(0,0);
 	transform: translate3d(0,0,0);
@@ -858,7 +903,7 @@ button.list-group-item {
 }
 .leftTransition-enter.leftTransition-enter-active {
 	opacity: 1;
-  transition: opacity 30ms ease-out;
+  transition: opacity 70ms ease-out;
 	/* transition: opacity 1s ease;
 	transform:   translate(0,0);
 	transform: translate3d(0,0,0);

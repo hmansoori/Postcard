@@ -236,7 +236,7 @@ class SignUpForm extends Component {
     if (!usernameFilled) {
       return (
         <div class="signInForm">
-          <h1>what name do you want to go by?</h1>
+          <h1>What name do you want to go by?</h1>
           <form>
             <FormGroup controlId="username">
               <FormControl
@@ -257,7 +257,7 @@ class SignUpForm extends Component {
     } else if (usernameFilled & !emailFilled) {
       return (
         <div class="signInForm">
-          <h1>hey, {this.state.username}! what email do you want to use?</h1>
+          <h1>Hey, {this.state.username}! What email do you want to use?</h1>
           <form>
             <FormGroup controlId="email" validationState={this.state.validEmail}>
               <FormControl
@@ -278,7 +278,7 @@ class SignUpForm extends Component {
     } else if (usernameFilled & emailFilled & !passwordFilled) {
       return (
         <div class="signInForm">
-          <h1>set your password</h1>
+          <h1>Set your password</h1>
           <form>
             <FormGroup controlId="password" validationState={this.state.validPassword}>
               <FormControl
@@ -310,7 +310,8 @@ class SignUpForm extends Component {
     } else if (usernameFilled & emailFilled & passwordFilled & !imageFilled) {
       return (
         <div className="signInForm">
-          <div className="previewComponent">
+        <h1>Choose an image for your profile picture, {this.state.username}</h1>
+          <div className="previewComponent avatarSelector">
             <form onSubmit={(e) => this._handleSubmit(e)} onSelect={(e) => e.stopPropagation()}>
               <input /*className="fileInput"*/
                 type="file"
@@ -330,7 +331,7 @@ class SignUpForm extends Component {
     } else {
       return (
         <div>
-          <h1>name and email confirmation</h1>
+          <h1>{this.state.username}, is this information correct?</h1>
           <form>
             <FormGroup controlId="username">
               <ControlLabel>Name:</ControlLabel>

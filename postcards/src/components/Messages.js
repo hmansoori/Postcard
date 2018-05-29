@@ -157,7 +157,7 @@ export class MessageBox extends React.Component {
     if (imagePreviewUrl) {
       $imagePreview = (<img src={imagePreviewUrl} className="img-preview" />);
     } else {
-      $imagePreview = (<div className="previewText">Preview Your File Once You Select It Here!</div>);
+      $imagePreview = (<div className="previewText">Your profile picture will appear here once you choose it!</div>);
     }
     return (
 

@@ -32,6 +32,10 @@ html, body {
   max-width: 600px;
   max-height: 300px;
   }
+  .avatarSelector{
+    text-align: center;
+    margin: auto;
+  }
   .message-card {
     position: relative;
   }

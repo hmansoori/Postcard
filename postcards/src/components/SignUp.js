@@ -210,7 +210,7 @@ class SignUpForm extends Component {
     if (imagePreviewUrl) {
       $imagePreview = (<img src={imagePreviewUrl} height='300' width='300' />);
     } else {
-      $imagePreview = (<div className="previewText">Please select an Image for Preview</div>);
+      $imagePreview = (<div className="previewText">Your profile picture will appear here once you choose it!</div>);
     }
     const username = this.state.username;
     const email = this.state.email;

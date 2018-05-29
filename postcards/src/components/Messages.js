@@ -2,6 +2,7 @@ import React from 'react';
 import Time from 'react-time'
 import firebase from 'firebase'
 import {Box, Card} from './CardAnimation.js'
+import { ClipLoader } from 'react-spinners';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
 //import noUserPic from './no-user-pic.png';
@@ -13,7 +14,8 @@ import { isNullOrUndefined } from 'util';
 export class MessageBox extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { post: '', file: '', imagePreviewUrl: '', photoCaption: '', videoCaption: '' };
+    this.state = { post: '', file: '', imagePreviewUrl: '', photoCaption: '', videoCaption: '',
+                   loadingSpinner: false };
     this._handleSubmitImage = this._handleSubmitImage.bind(this);
     this._handleSubmitVideo = this._handleSubmitVideo.bind(this);
     this.updatePost = this.updatePost.bind(this);
@@ -50,7 +52,7 @@ export class MessageBox extends React.Component {
       // For instance, get the download URL: https://firebasestorage.googleapis.com/...
       var downloadURL = uploadTask.snapshot.downloadURL;
       var messageRef = firebase.database().ref('groups/' + groupId);
-      
+
       var newMessage = {
         type: "video",
         video: downloadURL,
@@ -90,7 +92,7 @@ export class MessageBox extends React.Component {
       // Handle successful uploads on complete
       // For instance, get the download URL: https://firebasestorage.googleapis.com/...
       var downloadURL = uploadTask.snapshot.downloadURL;
-      
+
       var messageRef = firebase.database().ref('groups/' + groupId);
       var newMessage = {
         type: "image",
@@ -137,6 +139,12 @@ export class MessageBox extends React.Component {
   //a message child object. Information saved with each message includes a timestamp of when it was
   //written, the user who wrote it, and what the content is.
   postMessage(event) {
+    this.setState({ loadingSpinner: true });
+    setTimeout(function() {
+      this.setState({ loadingSpinner: false });
+      console.log("posted loading spinner");
+    }.bind(this), 3000);
+
     event.preventDefault(); //don't submit
 
     var MessagesRef = firebase.database().ref('groups/' + this.props.groupId); //the Messages in the JOITC
@@ -162,6 +170,13 @@ export class MessageBox extends React.Component {
     return (
 
           <div className="message-buttons">
+            <div className="spinner">
+              { this.state.loadingSpinner && <div className='sweet-loading'>
+                <ClipLoader
+                  color={'#123abc'}
+                />
+              </div> }
+            </div>
             <div>
               <DropdownButton class="choice-button text-button" dropup noCaret title="Write a Message">
                 <div className="previewComponent">
@@ -176,7 +191,7 @@ export class MessageBox extends React.Component {
             </button>
                       </div>
                     </form>
-                  
+
                 </div>
               </DropdownButton>
               <DropdownButton dropup noCaret title="Post a Photo" class="choice-button photo-button" pullRight>
@@ -194,7 +209,7 @@ export class MessageBox extends React.Component {
                       type="submit"
                       onClick={(e) => this._handleSubmitImage(e)}>Upload Image</button>
                   </form>
-                  
+
                 </div>
               </DropdownButton>
               <DropdownButton dropup noCaret title="Share a Video" class="choice-button video-button" id="video" pullRight>
@@ -212,7 +227,7 @@ export class MessageBox extends React.Component {
                       type="submit"
                       onClick={(e) => this._handleSubmitVideo(e)}>Upload Video</button>
                   </form>
-                  
+
                 </div>
               </DropdownButton>
             </div>
@@ -260,7 +275,7 @@ export class MessageList extends React.Component {
         console.log(group.key);
         console.log(group.val().users);
         userObject[group.key] = group.val().users;
-       
+
         for (var message in group.val().messages) {
           var obj = group.val().messages[message];
           obj.key = message;
@@ -269,7 +284,7 @@ export class MessageList extends React.Component {
         groupMessages.sort((a, b) => b.time - a.time);
         groupObject[group.key] = groupMessages;
       })
-      
+
       this.setState({ allMessages: groupObject });
       this.setState({ userObjects: userObject});
 
@@ -314,7 +329,7 @@ export class MessageList extends React.Component {
           userObj={usersToUse} group={this.props.groupId}/>
         messageItems.push(newMessage);
       }
-      
+
     }
 
 
@@ -346,7 +361,7 @@ export class MessageList extends React.Component {
 
       </Row>
       </div>
-      
+
       </div>
 
     );
@@ -378,6 +393,7 @@ class MessageItem extends React.Component {
 
   componentWillReceiveProps(nextProps) {
     // alex trebek, what is bad code?
+    console.log("what dis");
     if (nextProps.AllMessages !== this.state.leftCard) {
       if (nextProps.AllMessages.length > 1) {
         if (nextProps.AllMessages[0].time > nextProps.AllMessages[1].time) {
@@ -493,7 +509,7 @@ class MessageItem extends React.Component {
                           <div className="message-content">
                           <img className="message-img" src={item.image}/>
                           </div>
-                          <div className="caption-container"> 
+                          <div className="caption-container">
                             <Image className="avatar-with-cap" src={this.props.userObj[item.userId].avatarURL} circle responsive/>
                             <p className="caption">{item.caption}</p>
                           </div>
@@ -503,7 +519,7 @@ class MessageItem extends React.Component {
                         {item.video &&
                           <div>
                           <div className=" message-content "><video id="my-video" class="video-js" controls preload="auto"  data-setup="{}"><source src={this.props.Message.video} type='video/mp4'/></video></div>
-                          <div className="caption-container"> 
+                          <div className="caption-container">
                             <Image className="avatar-with-cap" src={this.props.userObj[item.userId].avatarURL} circle responsive/>
                             <p className="caption">{item.caption}</p>
                           </div>
@@ -515,11 +531,11 @@ class MessageItem extends React.Component {
                         <div>
                         <div className="message message-content">{item.text}</div>
                         <Image className="avatar-with-text" src={this.props.userObj[item.userId].avatarURL} circle responsive/>
-                        
+
                         <div className="user"> <span className="handle-with-text">{this.props.userObj[item.userId].username}</span></div>
                         </div>
                         }
-                        
+
                       </div>
                       {/* Create a section for showing Message likes
                       <div className="likes">
@@ -535,7 +551,7 @@ class MessageItem extends React.Component {
                     </Box>
                    );
                 })}
-            </ReactCSSTransitionGroup> 
+            </ReactCSSTransitionGroup>
           </div>
           <div className="rightDeck">
             <ReactCSSTransitionGroup
@@ -555,7 +571,7 @@ class MessageItem extends React.Component {
                           <div className="message-content">
                           <img className="message-img" src={item.image}/>
                           </div>
-                          <div className="caption-container"> 
+                          <div className="caption-container">
                             <Image className="avatar-with-cap" src={this.props.userObj[item.userId].avatarURL} circle responsive/>
                             <p className="caption">{item.caption}</p>
                           </div>
@@ -565,7 +581,7 @@ class MessageItem extends React.Component {
                         {item.video &&
                           <div>
                           <div className=" message-content "><video id="my-video" class="video-js" controls preload="auto"  data-setup="{}"><source src={this.props.Message.video} type='video/mp4'/></video></div>
-                          <div className="caption-container"> 
+                          <div className="caption-container">
                             <Image className="avatar-with-cap" src={this.props.userObj[item.userId].avatarURL} circle responsive/>
                             <p className="caption">{item.caption}</p>
                           </div>
@@ -577,12 +593,12 @@ class MessageItem extends React.Component {
                         <div>
                         <div className="message message-content">{item.text}</div>
                         <Image className="avatar-with-text" src={this.props.userObj[item.userId].avatarURL} circle responsive/>
-                        
+
                         <div className="user"> <span className="handle-with-text">{this.props.userObj[item.userId].username}</span></div>
                         </div>
                         }
-                        
-                      
+
+
                       {/* /* Create a section for showing Message likes
                       <div className="likes">
 
@@ -600,7 +616,7 @@ class MessageItem extends React.Component {
             </ReactCSSTransitionGroup>
           </div>
         </div>
-        
+
         }
       </div>
     );

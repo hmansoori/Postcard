@@ -24,7 +24,7 @@ html, body {
     text-align: center;
     margin: auto;
     position: absolute;
- 
+
   top: 0;
   right: 0;
   bottom: 0;
@@ -51,7 +51,7 @@ html, body {
     height: 310px !important;
   }
   .time {
-    padding: 10px 0; 
+    padding: 10px 0;
     font-size: 12px;
     text-transform: uppercase;
   }
@@ -60,7 +60,7 @@ html, body {
     height: 200px;
     padding-top: 10px;
     text-align: center;
-  
+
   }
   .message-img {
     object-fit: cover;
@@ -94,7 +94,7 @@ html, body {
   .rightDeck {
     float: right;
     margin-top: 70px;
-    
+
   }
   .message-section {
     text-align: center;
@@ -113,7 +113,7 @@ html, body {
     /* border-top-left-radius: 20px;
     border-top-right-radius: 20px;
     box-shadow: 10px 5px #006699; */
-  
+
   }
   .btn-default {
     border: none;
@@ -128,7 +128,7 @@ html, body {
   }
   .container{
     position: relative;
-    
+
   }
   .refresh {
     padding-top: 30px;
@@ -137,7 +137,7 @@ html, body {
     margin: 0;
     width: 100%;
   }
-  
+
   .submitButton {
     color: white;
     background-color: #006699;
@@ -146,14 +146,14 @@ html, body {
     margin-bottom: 5px;
 
   }
-  
+
   .previewComponent {
     padding: 20px;
     border: none;
     font-size: 10px;
     width: 250px;
   }
-  
+
   .video-js {
     position: relative !important;
     width: 100% !important;
@@ -176,7 +176,7 @@ html, body {
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
     box-shadow: 10px 5px #006699;
-    
+
   }
   .bm-burger-button {
     position: fixed;
@@ -184,7 +184,7 @@ html, body {
     height: 50px;
     left: 0px;
     top: 90px;
-  
+
   }
 
   .avatar-with-cap {
@@ -192,7 +192,7 @@ html, body {
     width: 40px;
     float: left;
     margin-right: 10px;
-  
+
   }
 
   .caption {
@@ -202,13 +202,13 @@ html, body {
     overflow: scroll;
     margin-bottom: 0px;
   }
-  
+
   .caption-container {
     padding-top: 10px;
     overflow: scroll;
     width: 200px;
     height: 50px;
-    
+
   }
   .rightTransition-enter {
     opacity: 0;
@@ -266,8 +266,8 @@ html, body {
   margin: auto;
   padding-top: 50px;
   border-radius: 10px;
-  
 }
+
 .avatar-with-text {
   height: 40px;
   width: 40px;
@@ -296,9 +296,9 @@ button.list-group-item {
 }
 
 @media (min-width: 768px) {
-    .main-container { 
+    .main-container {
         width: 750px;
-    } 
+    }
     .item {
         width: 400px !important;
         height: 500px !important;
@@ -375,14 +375,20 @@ button.list-group-item {
       border-radius: 5px;
       margin-top: 5px;
     }
-  
+
+    .spinner {
+      position: relative;
+      top: -500px;
+      left: -100px;
+    }
+
     .previewComponent {
       padding: 20px;
       border: none;
       font-size: 15px;
       width: 290px;
     }
-    
+
     .video-js {
       position: relative !important;
       width: 100% !important;
@@ -405,7 +411,7 @@ button.list-group-item {
       border-top-right-radius: 20px;
       border-bottom-right-radius: 20px;
       box-shadow: 10px 5px #006699;
-      
+
     }
     .bm-burger-button {
       position: fixed;
@@ -413,23 +419,23 @@ button.list-group-item {
       height: 200px;
       left: 0px;
       top: 300px;
-    
+
     }
-  
+
     .avatar-with-cap {
       height: 50px;
       width: 50px;
       float: left;
       margin-right: 10px;
-    
+
     }
-    
+
     .caption {
       text-align: left;
       padding: 10px;
       font-size: 14px;
     }
-    
+
     .caption-container {
       padding-top: 15px;
       width: 200px;
@@ -437,7 +443,7 @@ button.list-group-item {
     }
 
     .time {
-      padding: 10px 0; 
+      padding: 10px 0;
       font-size: 14px;
       text-transform: uppercase;
     }
@@ -469,7 +475,7 @@ button.list-group-item {
       padding-top: 50px;
       border-radius: 10px;
       height: 345px;
-      
+
     }
     .avatar-with-text {
       height: 60px;
@@ -501,7 +507,7 @@ button.list-group-item {
       border: none;
       text-align: center;
     }
-    
+
     .list-group-item {
       border: none;
       text-align: center;
@@ -518,9 +524,9 @@ button.list-group-item {
 
 
 @media (min-width: 992px) {
-    .main-container { 
-        width: 970px; 
-    } 
+    .main-container {
+        width: 970px;
+    }
     .item {
       width: 480px !important;
       height: 580px !important;
@@ -538,7 +544,7 @@ button.list-group-item {
       height: 415px;
       padding-top: 20px;
       text-align: center;
-      
+
     }
     .previewComponent {
       padding: 20px;
@@ -547,7 +553,7 @@ button.list-group-item {
       width: 350px;
     }
 
-    
+
     .video-js {
       position: relative !important;
       width: 100% !important;
@@ -570,7 +576,7 @@ button.list-group-item {
       border-top-right-radius: 20px;
       border-bottom-right-radius: 20px;
       box-shadow: 10px 5px #006699;
-      
+
     }
     .bm-burger-button {
       position: fixed;
@@ -578,23 +584,23 @@ button.list-group-item {
       height: 200px;
       left: 0px;
       top: 250px;
-    
+
     }
-  
+
     .avatar-with-cap {
       height: 60px;
       width: 60px;
       float: left;
       margin-right: 10px;
-    
+
     }
-    
+
     .caption {
       text-align: left;
       padding: 15px;
       font-size: 16px;
     }
-    
+
     .caption-container {
       padding-top: 30px;
       width: 440px;
@@ -602,7 +608,7 @@ button.list-group-item {
     }
 
     .time {
-      padding-top: 10px; 
+      padding-top: 10px;
       font-size: 18px;
       text-transform: uppercase;
     }
@@ -668,7 +674,7 @@ button.list-group-item {
 
 }
 @media (min-width: 1200px) {
-    .main-container { width: 1170px; } 
+    .main-container { width: 1170px; }
 
     .navbar {
       font-size: 20px;
@@ -691,7 +697,7 @@ button.list-group-item {
       height: 520px;
       padding-top: 20px;
       text-align: center;
-      
+
     }
     .message-buttons {
       bottom: 0px;
@@ -718,7 +724,7 @@ button.list-group-item {
       border-top-right-radius: 20px;
       border-bottom-right-radius: 20px;
       box-shadow: 10px 5px #006699;
-      
+
     }
     .bm-burger-button {
       position: fixed;
@@ -726,7 +732,7 @@ button.list-group-item {
       height: 260px;
       left: 0px;
       top: 300px;
-    
+
     }
     .message {
       padding-top:60px;
@@ -746,15 +752,15 @@ button.list-group-item {
       width: 70px;
       float: left;
       margin-right: 10px;
-    
+
     }
-    
+
     .caption {
       text-align: left;
       padding: 20px;
       font-size: 18px;
     }
-    
+
     .caption-container {
       padding-top: 5px;
       width: 440px;
@@ -798,7 +804,7 @@ button.list-group-item {
       border: none;
       text-align: center;
     }
-    
+
     .list-group-item {
       border: none;
       text-align: center;
@@ -818,7 +824,7 @@ button.list-group-item {
       width: 370px;
     }
 
-    
+
     .video-js {
       position: relative !important;
       width: 100% !important;
@@ -931,7 +937,7 @@ button.list-group-item {
   transition: opacity 3000ms ease-out; */
 	/* transform:   translate(200px,0);
 	transform: translate3d(200px,0,0);
-} */ 
+} */
 
 /* .caption {
   text-align: left;
@@ -986,4 +992,3 @@ button {
   border: none;
   background-color: #e6f2ff;
 }
-

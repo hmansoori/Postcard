@@ -318,7 +318,7 @@ class SignUpForm extends Component {
                 onSelect={(e) => e.stopPropagation()}
                 onChange={(e) => this._handleImageChange(e)} />
             </form>
-            <div className="imgPreview">
+            <div style={{marginTop: "10px"}} className="imgPreview">
               {$imagePreview}
             </div>
           </div>

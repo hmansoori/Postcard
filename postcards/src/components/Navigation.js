@@ -40,10 +40,12 @@ const Navigation = () =>
       <Nav pullRight>
 
 
-      <li class="sign-out" onClick={auth.doSignOut}>Sign Out</li>
+
 
         <li><Link to={routes.GROUP}>Groups</Link></li>
         <li><Link to={routes.ACCOUNT}>Account</Link></li>
+
+        <li><Link to={routes.LANDING} onClick={auth.doSignOut}>Sign Out</Link></li>
 
       </Nav>
     </Navbar>

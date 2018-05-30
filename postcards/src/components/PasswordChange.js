@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import { Button, FormGroup, FormControl } from 'react-bootstrap';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 import { auth } from '../firebase';
 
@@ -26,6 +29,14 @@ class PasswordChangeForm extends Component {
     auth.doPasswordUpdate(passwordOne)
       .then(() => {
         this.setState(() => ({ ...INITIAL_STATE }));
+        toast.success('You have successfully changed your password.', {
+        position: "top-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        });
       })
       .catch(error => {
         this.setState(byPropKey('error', error));
@@ -47,6 +58,17 @@ class PasswordChangeForm extends Component {
 
     return (
       <form onSubmit={this.onSubmit}>
+        <ToastContainer
+          position="top-center"
+          autoClose={5000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnVisibilityChange
+          draggable
+          pauseOnHover
+        />
         <FormGroup controlId="passwordOne">
           <FormControl
             value={passwordOne}
@@ -71,7 +93,7 @@ class PasswordChangeForm extends Component {
           Save Changes
         </Button>
 
-        { error && <p>{error.message}</p> }
+        { error && <p style={{marginTop: '10px'}}>{error.message}</p> }
       </form>
     );
   }

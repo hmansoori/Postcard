@@ -23,6 +23,7 @@ html, body {
   .welcome-content {
     text-align: center;
     margin: auto;
+    margin-top: 190px;
     position: absolute;
 
   top: 0;

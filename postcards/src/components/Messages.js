@@ -518,7 +518,7 @@ class MessageItem extends React.Component {
                         }
                         {item.video &&
                           <div>
-                          <div className=" message-content "><video id="my-video" class="video-js" controls preload="auto"  data-setup="{}"><source src={this.props.Message.video} type='video/mp4'/></video></div>
+                          <div className=" message-content "><video id="my-video" class="video-js" controls preload="auto"  data-setup="{}"><source src={item.video} type='video/mp4'/></video></div>
                           <div className="caption-container">
                             <Image className="avatar-with-cap" src={this.props.userObj[item.userId].avatarURL} circle responsive/>
                             <p className="caption">{item.caption}</p>
@@ -580,7 +580,7 @@ class MessageItem extends React.Component {
                         }
                         {item.video &&
                           <div>
-                          <div className=" message-content "><video id="my-video" class="video-js" controls preload="auto"  data-setup="{}"><source src={this.props.Message.video} type='video/mp4'/></video></div>
+                          <div className=" message-content "><video id="my-video" class="video-js" controls preload="auto"  data-setup="{}"><source src={item.video} type='video/mp4'/></video></div>
                           <div className="caption-container">
                             <Image className="avatar-with-cap" src={this.props.userObj[item.userId].avatarURL} circle responsive/>
                             <p className="caption">{item.caption}</p>

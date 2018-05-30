@@ -111,32 +111,24 @@ class SignUpForm extends Component {
       // Observe state change events such as progress, pause, and resume
       // Get task progress, including the number of bytes uploaded and the total number of bytes to be uploaded
       var progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
-      console.log('Upload is ' + progress + '% done');
       switch (snapshot.state) {
         case firebase.storage.TaskState.PAUSED: // or 'paused'
-          console.log('Upload is paused');
           break;
         case firebase.storage.TaskState.RUNNING: // or 'running'
-          console.log('Upload is running');
           break;
       }
     }, function (error) {
       // Handle unsuccessful uploads
-      console.log(error);
     }, function () {
       // Handle successful uploads on complete
       // For instance, get the download URL: https://firebasestorage.googleapis.com/...
       var downloadURL = uploadTask.snapshot.downloadURL;
       db.doCreateUser(newUser.uid, username, email, downloadURL)
           .then(() => {
-            console.log('kept going');
-            //this.setState(() => ({ ...INITIAL_STATE }));
             history.push(routes.GROUP);
 
           })
           .catch(error => {
-            //this.setState(byPropKey('error', error));
-            console.log('here');
           });
 
     });
@@ -148,24 +140,22 @@ class SignUpForm extends Component {
       this.setState(byPropKey => ({
         'usernameFilled': !this.state.usernameFilled,
       }));
-      console.log("filled");
-      console.log(this.state.usernameFilled);
-      console.log(this.state.username);
+
     } else if (button == 'emailFilled') {
       this.setState(byPropKey => ({
         'emailFilled': !this.state.emailFilled,
       }));
-      console.log("email filled: " + this.state.email);
+
     } else if (button == 'passwordFilled') {
       this.setState(byPropKey => ({
         'passwordFilled': !this.state.passwordFilled,
       }));
     } else if (button == 'imageFilled') {
-      console.log('clicked');
+
       this.setState(byPropKey => ({
         'imageFilled': !this.state.imageFilled,
       }));
-      console.log(this.state.imageFilled)
+
     }
   }
 
@@ -199,7 +189,6 @@ class SignUpForm extends Component {
       })
       .catch(error => {
         this.setState(byPropKey('error', error));
-        console.log(error);
       });
 
   }

@@ -36,13 +36,10 @@ export class MessageBox extends React.Component {
       // Observe state change events such as progress, pause, and resume
       // Get task progress, including the number of bytes uploaded and the total number of bytes to be uploaded
       var progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
-      console.log('Upload is ' + progress + '% done');
       switch (snapshot.state) {
         case firebase.storage.TaskState.PAUSED: // or 'paused'
-          console.log('Upload is paused');
           break;
         case firebase.storage.TaskState.RUNNING: // or 'running'
-          console.log('Upload is running');
           break;
       }
     }, function (error) {
@@ -77,13 +74,13 @@ export class MessageBox extends React.Component {
       // Observe state change events such as progress, pause, and resume
       // Get task progress, including the number of bytes uploaded and the total number of bytes to be uploaded
       var progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
-      console.log('Upload is ' + progress + '% done');
+
       switch (snapshot.state) {
         case firebase.storage.TaskState.PAUSED: // or 'paused'
-          console.log('Upload is paused');
+
           break;
         case firebase.storage.TaskState.RUNNING: // or 'running'
-          console.log('Upload is running');
+
           break;
       }
     }, function (error) {
@@ -142,7 +139,7 @@ export class MessageBox extends React.Component {
     this.setState({ loadingSpinner: true });
     setTimeout(function() {
       this.setState({ loadingSpinner: false });
-      console.log("posted loading spinner");
+
     }.bind(this), 3000);
 
     event.preventDefault(); //don't submit
@@ -272,8 +269,7 @@ export class MessageList extends React.Component {
       this.setState({ groups: snapshot.val() });
       snapshot.forEach((group) => {
         var groupMessages = [];
-        console.log(group.key);
-        console.log(group.val().users);
+
         userObject[group.key] = group.val().users;
 
         for (var message in group.val().messages) {
@@ -340,19 +336,6 @@ export class MessageList extends React.Component {
       <Col xs={12} xsOffset={0} sm={10} smOffset={2} md={10} mdOffset={2} lg={9} lgOffset={3}>
           {messageItems[this.state.index]}
       </Col>
-
-
-      {/*<Col xs={2} className="arrow-container">
-        <div>
-          <button className="arrow" disabled={this.state.index === 0} onClick={this.lowerIndex}><i class="fas fa-chevron-up fa-5x" ></i></button>
-        </div>
-        <div>
-          <button className="arrow" disabled={this.state.index === (messageItems.length -1)} onClick={this.raiseIndex}><i class="fas fa-chevron-down fa-5x"></i></button>
-        </div>
-        <div>
-          <button className="refresh" onClick={this.resetIndex}><i class="fas fa-sync-alt fa-5x"></i></button>
-        </div>
-      </Col>*/}
       </Row>
       <Row>
       <Col xs={12} sm={10} smOffset={2} md={10} mdOffset={2} lg={9} lgOffset={2} >
@@ -393,7 +376,7 @@ class MessageItem extends React.Component {
 
   componentWillReceiveProps(nextProps) {
     // alex trebek, what is bad code?
-    console.log("what dis");
+
     if (nextProps.AllMessages !== this.state.leftCard) {
       if (nextProps.AllMessages.length > 1) {
         if (nextProps.AllMessages[0].time > nextProps.AllMessages[1].time) {
@@ -401,8 +384,7 @@ class MessageItem extends React.Component {
             leftCard: nextProps.AllMessages.reverse(),
             rightCard: []
           });
-          console.log(this.state.leftCard)
-          //console.log("reversed");
+
         } else {
           this.setState({
             leftCard: nextProps.AllMessages,
@@ -424,7 +406,7 @@ class MessageItem extends React.Component {
   //A method to "like" a Message
   likeMessage(key) {
     /* Access the Message in the firebase and add this user's name */
-    console.log(key);
+
     var MessageRef = firebase.database().ref('groups/' + this.props.group + '/messages/' + key);
     var MessageLikes = MessageRef.child('likes');
 
@@ -437,9 +419,7 @@ class MessageItem extends React.Component {
     else { //add my like
       likeObj[userId] = true; //just make it true so we have a key
     }
-
     MessageLikes.set(likeObj) //update the likes!
-
   }
 
   onItemActionLeft(id) {
@@ -450,12 +430,6 @@ class MessageItem extends React.Component {
       rightCard: this.state.rightCard.concat(foo),
       iVlastUsedIndex: id
     });
-    console.log("Called left");
-    console.log("LEFT CARDS");
-    console.log(this.state.leftCard);
-    console.log("RIGHT CARDS");
-    console.log(this.state.rightCard);
-
   }
 
 
@@ -466,18 +440,9 @@ class MessageItem extends React.Component {
       leftCard: this.state.leftCard.concat(foo),
       rightCard: newRightItems,
     });
-    console.log("Called right");
-    console.log(this.state.rightCard);
   }
 
   render() {
-    // var iLike = false;
-    // var likeCount = 0; //count likes
-    // if (this.props.Message.likes) {
-    //   likeCount = Object.keys(this.props.Message.likes).length;
-    //   if (this.props.Message.likes[firebase.auth().currentUser.uid])
-    //     iLike = true;
-    // }
     var userRef = firebase.database().ref('users/' + this.props.user);
     var user;
     userRef.on('value', (snapshot) => {
@@ -537,17 +502,6 @@ class MessageItem extends React.Component {
                         }
 
                       </div>
-                      {/* Create a section for showing Message likes
-                      <div className="likes">
-
-                        Show a heart icon that, when clicked, calls like `likeMessage` function
-                        <i className={'fa fa-heart ' + (iLike ? 'user-liked' : '')} aria-label="like" onClick={() => this.likeMessage(item.key)} ></i>
-
-                        Show the total number of likes
-                        <span>space {likeCount}</span>
-                      </div>
-                      <div> {this.state.show ? <EditBar message={this.props.Message} group={this.props.group} /> : null}
-                      </div> */}
                     </Box>
                    );
                 })}
@@ -560,7 +514,6 @@ class MessageItem extends React.Component {
               transitionEnterTimeout={3000}
               transitionLeaveTimeout={3000}>
                 {this.state.rightCard.map((item, i) => {
-                  console.log(i + '+' + item.caption)
                   return (
                     <Box key={i}
                       onClick={this.onItemActionRight.bind(this, i)}
@@ -597,19 +550,6 @@ class MessageItem extends React.Component {
                         <div className="user"> <span className="handle-with-text">{this.props.userObj[item.userId].username}</span></div>
                         </div>
                         }
-
-
-                      {/* /* Create a section for showing Message likes
-                      <div className="likes">
-
-                        Show a heart icon that, when clicked, calls like `likeMessage` function
-                        <i className={'fa fa-heart ' + (iLike ? 'user-liked' : '')} aria-label="like" onClick={() => this.likeMessage()} ></i>
-
-                        Show the total number of likes
-                        <span>space {likeCount}</span>
-                      </div>
-                      <div> {this.state.show ? <EditBar message={item} group={this.props.group} /> : null}
-                      </div> */ }
                     </Box>
                   );
                 })}

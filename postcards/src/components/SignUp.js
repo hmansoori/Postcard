@@ -5,7 +5,7 @@ import {
 } from 'react-router-dom';
 import { auth, db } from '../firebase';
 import * as routes from '../constants/routes';
-import { Button, FormGroup, FormControl, ControlLabel } from 'react-bootstrap';
+import { Button, FormGroup, FormControl, ControlLabel, Image } from 'react-bootstrap';
 import { Col } from 'react-bootstrap';
 import firebase from 'firebase';
 
@@ -199,7 +199,7 @@ class SignUpForm extends Component {
     let { imagePreviewUrl } = this.state;
     let $imagePreview = null;
     if (imagePreviewUrl) {
-      $imagePreview = (<img src={imagePreviewUrl} height='300' width='300' />);
+      $imagePreview = (<Image src={imagePreviewUrl} circle  height='180' width='180' />);
     } else {
       $imagePreview = (<div className="previewText">Your profile picture will appear here once you choose it!</div>);
     }

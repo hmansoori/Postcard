@@ -10,7 +10,9 @@ html, body {
   overflow: hidden;
 
 }
-
+.welcome-link {
+  color: white;
+}
 .main-container {
   padding-right: 15px;
   margin-right: auto;

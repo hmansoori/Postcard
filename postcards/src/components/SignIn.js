@@ -50,7 +50,6 @@ class SignInForm extends Component {
       })
       .catch(error => {
         this.setState(byPropKey('error', error));
-        console.log(error);
       });
 
     event.preventDefault();

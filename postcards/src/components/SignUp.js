@@ -27,7 +27,8 @@ const INITIAL_STATE = {
   usernameFilled: false,
   emailFilled: false,
   passwordFilled: false,
-  imageFilled: false
+  imageFilled: false,
+  file: ''
 };
 
 const byPropKey = (propertyName, value) => () => ({
@@ -129,6 +130,7 @@ class SignUpForm extends Component {
 
           })
           .catch(error => {
+            console.log('wow fuck');
           });
 
     });
@@ -185,6 +187,7 @@ class SignUpForm extends Component {
       .then(authUser => {
         //This funtion will handle the uploading ofthe profile avatar to fire base.
         //It will also facilitate pushing the user data up to firebase.
+
         this._handleSubmitImage(authUser, email, username)
       })
       .catch(error => {
@@ -312,6 +315,7 @@ class SignUpForm extends Component {
             </div>
           </div>
           <Button bsStyle="primary"
+            disabled={this.state.file === ''}
             onClick={() => this.handleClick('imageFilled')}>
             Continue
           </Button>

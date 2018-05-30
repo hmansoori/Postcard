@@ -250,6 +250,7 @@ class SignUpForm extends Component {
       return (
         <div class="signInForm">
           <h1>Hey, {this.state.username}! What email do you want to use?</h1>
+          <p>Emails must be in valid format, only one account per email </p>
           <form>
             <FormGroup controlId="email" validationState={this.state.validEmail}>
               <FormControl
@@ -271,6 +272,7 @@ class SignUpForm extends Component {
       return (
         <div class="signInForm">
           <h1>Set your password</h1>
+          <p>Passwords must be at least six characters long</p>
           <form>
             <FormGroup controlId="password" validationState={this.state.validPassword}>
               <FormControl
@@ -303,6 +305,7 @@ class SignUpForm extends Component {
       return (
         <div className="signInForm">
         <h1>Choose an image for your profile picture, {this.state.username}</h1>
+        <p>Please upload an image file</p>
           <div className="previewComponent avatarSelector">
             <form onSubmit={(e) => this._handleSubmit(e)} onSelect={(e) => e.stopPropagation()}>
               <input /*className="fileInput"*/

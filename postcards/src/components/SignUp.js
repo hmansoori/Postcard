@@ -126,11 +126,10 @@ class SignUpForm extends Component {
       var downloadURL = uploadTask.snapshot.downloadURL;
       db.doCreateUser(newUser.uid, username, email, downloadURL)
           .then(() => {
-            history.push(routes.GROUP);
+            this.props.history.push(routes.GROUP);
 
           })
           .catch(error => {
-            console.log('wow fuck');
           });
 
     });

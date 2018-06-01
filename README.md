@@ -52,7 +52,7 @@ Postcards allowed us to provide proof of concept for a clutter-free social media
 
 # Terms & Conditions
 
-###Welcome to Postcards!
+**Welcome to Postcards!**
 
 **These terms and conditions outline the rules and regulations for the use of Postcards' Website.
 By accessing this website, we assume you accept these terms and conditions in full. Do not continue to use Postcards' website if you do not accept all the terms and conditions stated on this page.**
@@ -63,32 +63,32 @@ The following terminology applies to these Terms and Conditions, Privacy Stateme
 We employ the use of cookies. By using Postcards' website you consent to the use of cookies in accordance with Postcards’ privacy policy. Most of the modern day interactive websites use cookies to enable us to retrieve user details for each visit. Cookies are used in some areas of our site to enable the functionality of this area and ease of use for those people visiting. Some of our affiliate / advertising partners may also use cookies.
 
 ### License
-Unless otherwise stated, Postcards and/or its licensors own the intellectual property rights for all material on Postcards. All intellectual property rights are reserved. You may view and/or print pages from http://postcards.com for your own personal use subject to restrictions set in these terms and conditions.
+Unless otherwise stated, Postcards and/or its licensors own the intellectual property rights for all material on Postcards. All intellectual property rights are reserved. You may view and/or print pages from Postcards for your own personal use subject to restrictions set in these terms and conditions.
 You must not:      	
-	* Republish material from http://postcards.com
-	* Sell, rent or sub-license material from http://postcards.com
-	* Reproduce, duplicate or copy material from http://postcards.com
+	* Republish material from Postcards
+	* Sell, rent or sub-license material from Postcards
+	* Reproduce, duplicate or copy material from Postcards
   * Redistribute content from Postcards (unless content is specifically made for redistribution).
 
 ### User Comments
 This Agreement shall begin on the date hereof. Certain parts of this website offer the opportunity for users to post and exchange opinions, information, material and data ('Comments') in areas of the website. Postcards does not screen, edit, publish or review Comments prior to their appearance on the website and Comments do not reflect the views or opinions of Postcards, its agents or affiliates. Comments reflect the view and opinion of the person who posts such view or opinion. To the extent permitted by applicable laws Postcards shall not be responsible or liable for the Comments or for any loss cost, liability, damages or expenses caused and or suffered as a result of any use of and/or posting of and/or appearance of the Comments on this website.
 
 You warrant and represent that:
-	* You are entitled to post the Comments on our website and have all necessary licenses and consents to do so;
-	* The Comments do not infringe any intellectual property right, including without limitation copyright, patent or trademark, or other proprietary right of any third party;
-	* The Comments do not contain any defamatory, libelous, offensive, indecent or otherwise unlawful material or material which is an invasion of privacy
-	* The Comments will not be used to solicit or promote business or custom or present commercial activities or unlawful activity.
+* You are entitled to post the Comments on our website and have all necessary licenses and consents to do so;
+* The Comments do not infringe any intellectual property right, including without limitation copyright, patent or trademark, or other proprietary right of any third party;
+* The Comments do not contain any defamatory, libelous, offensive, indecent or otherwise unlawful material or material which is an invasion of privacy
+* The Comments will not be used to solicit or promote business or custom or present commercial activities or unlawful activity.
 
 You hereby grant to Postcards a non-exclusive royalty-free license to use, reproduce,
 edit and authorize others to use, reproduce and edit any of your Comments in any and all forms, formats or media.
 
 ### Hyperlinking to our Content
 The following organizations may link to our Web site without prior written approval:  	
-  	* Government agencies;
-  	* Search engines;
-  	* News organizations;
-  	* Online directory distributors when they list us in the directory may link to our Web site in the same manner as they hyperlink to the Web sites of other listed businesses; and
-    * System-wide Accredited Businesses except soliciting non-profit organizations, charity shopping malls, and charity fundraising groups which may not hyperlink to our Web site.  
+* Government agencies;
+* Search engines;
+* News organizations;
+* Online directory distributors when they list us in the directory may link to our Web site in the same manner as they hyperlink to the Web sites of other listed businesses; and
+* System-wide Accredited Businesses except soliciting non-profit organizations, charity shopping malls, and charity fundraising groups which may not hyperlink to our Web site.  
 
 These organizations may link to our home page, to publications or to other Web site information so long as the link: (a) is not in any way misleading; (b) does not falsely imply sponsorship, endorsement or approval of the linking party and its products or services; and (c) fits within the context of the linking party's site.
 
@@ -99,9 +99,9 @@ We will approve link requests from these organizations if we determine that: (a)
 If you are among the organizations listed in paragraph 2 above and are interested in linking to our website, you must notify us by sending an e-mail to info@postcards.com. Please include your name, your organization name, contact information (such as a phone number and/or e-mail address) as well as the URL of your site, a list of any URLs from which you intend to link to our Web site, and a list of the URL(s) on our site to which you would like to link. Allow 2-3 weeks for a response.
 
 Approved organizations may hyperlink to our Web site as follows:
-	* By use of our corporate name; or
-	* By use of the uniform resource locator (Web address) being linked to; or
-	* By use of any other description of our Web site or material being linked to that makes sense within the context and format of content on the linking party's site.
+* By use of our corporate name; or
+* By use of the uniform resource locator (Web address) being linked to; or
+* By use of any other description of our Web site or material being linked to that makes sense within the context and format of content on the linking party's site.
 
 No use of Postcards’ logo or other artwork will be allowed for linking absent a trademark license agreement.
 
@@ -130,6 +130,7 @@ To the extent that the website and the information and services on the website a
 # Privacy Statement:
 
 **Welcome to our Privacy Policy!**
+
 Your privacy is *critically* important to us.
 
 **Postcards**
@@ -141,7 +142,7 @@ This Privacy Policy, together with the Terms and conditions posted on our Websit
 ### Website Visitors
 Like most website operators, Postcards collects non-personally-identifying information of the sort that web browsers and servers typically make available, such as the browser type, language preference, referring site, and the date and time of each visitor request. Postcards’ purpose in collecting non-personally identifying information is to better understand how Postcards’ visitors use its website. From time to time, Postcards may release non-personally-identifying information in the aggregate, e.g., by publishing a report on trends in the usage of its website.
 
-Postcards also collects potentially personally-identifying information like Internet Protocol (IP) addresses for logged in users and for users leaving comments on http://postcards.com blog posts. Postcards only discloses logged in user and commenter IP addresses under the same circumstances that it uses and discloses personally-identifying information as described below.
+Postcards also collects potentially personally-identifying information like Internet Protocol (IP) addresses for logged in users and for users leaving comments on Postcards blog posts. Postcards only discloses logged in user and commenter IP addresses under the same circumstances that it uses and discloses personally-identifying information as described below.
 
 ### Gathering of Personally-Identifying Information
 Certain visitors to Postcards’ websites choose to interact with Postcards in ways that require Postcards to gather personally-identifying information. The amount and type of information that Postcards gathers depends on the nature of the interaction. For example, we ask visitors who sign up to provide a username and email address.
@@ -178,26 +179,26 @@ Although most changes are likely to be minor, Postcards may change its Privacy P
 Postcards reserves the right to use any and all images posted to our site.
 
 ### Data Policy
-**Policy brief & purpose**
+**Policy Brief & Purpose**
 Our Company Data Protection Policy refers to our commitment to treat information of employees, customers, stakeholders and other interested parties with the utmost care and confidentiality. With this policy, we ensure that we gather, store and handle data fairly, transparently and with respect towards individual rights.
 
 **Scope**
 This policy refers to all parties (employees, job candidates, customers, suppliers etc.) who provide any amount of information to us.
 
-**Who is covered under the Data Protection Policy?**
+**Who is Covered Under the Data Protection Policy?**
 Employees of our company and its subsidiaries must follow this policy. Contractors, consultants, partners and any other external entity are also covered. Generally, our policy refers to anyone we collaborate with or acts on our behalf and may need occasional access to data.
 
-**Policy elements**
+**Policy Elements**
 As part of our operations, we need to obtain and process information. This information includes any offline or online data that makes a person identifiable such as names, addresses, usernames and passwords, digital footprints, photographs, social security numbers, financial data etc. Our company collects this information in a transparent way and only with the full cooperation and knowledge of interested parties. Once this information is available to us, the following rules apply.
 
-**Our data will be:**
+**Our Data Will Be:**
 * Accurate and kept up-to-date
 * Collected fairly and for lawful purposes only
 * Processed by the company within its legal and moral boundaries
 * Protected against any unauthorized or illegal access by internal or external parties
 
 
-**Our data will not be:**
+**Our Data Will Not Be:**
 * Communicated informally
 * Stored for more than a specified amount of time
 * Transferred to organizations, states or countries that do not have adequate data protection policies

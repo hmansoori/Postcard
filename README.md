@@ -133,7 +133,7 @@ To the extent that the website and the information and services on the website a
 
 Your privacy is *critically* important to us.
 
-**Postcards**
+### Postcards
 
 It is Postcards’ policy to respect your privacy regarding any information we may collect while operating our website. This Privacy Policy applies to postcards.com (hereinafter, "us", "we", or "postcards.com"). We respect your privacy and are committed to protecting personally identifiable information you may provide us through the Website. We have adopted this privacy policy ("Privacy Policy") to explain what information may be collected on our Website, how we use this information, and under what circumstances we may disclose the information to third parties. This Privacy Policy applies only to information we collect through the Website and does not apply to our collection of information from other sources.
 

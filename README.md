@@ -43,6 +43,23 @@ Our team's contact information is listed above. If any developers have further q
 ## User Documentation & User Guide
 Postcards is a React web application that stores its users’ data on Firebase. Users can rest assured that their sensitive data - such as passwords - are securely stored and are not accessible in case of data breaches.
 
+### Getting Started
+
+The first page you will encounter is the landing page, where you may sign up or log in to Postcards. If you choose to sign up, click the “Get Started” button on the main page. You are asked to provide a display name, profile picture, email, and password. If you already have an account, simply click the “Sign In” button at the top of the page and login with your email and password. If you are still signed in from a previous session, click the “Groups” button at the top of the page to go straight to the groups page.
+
+### Creating/Joining Groups
+
+To create a group simply click the “Choose a Group” button on the left of the screen, choose “New Group” and type in the name of the group. This will create a new group and generate a unique four-digit code for the group. To have others join the group you created, send them the code for that group. To join a group, click the “Choose a Group” button then select “Join Group” and enter the four-digit code of the group you wish to join. After entering the code, you will have access to the group and from then on you may select the group you wish to join from the list of available groups in the same menu.
+
+### Postcards
+
+Once you are in a group you will see a stack of cards if any postcards have been sent to the group. To cycle through cards, click on the left stack to move the top card over to the right and view the next post. You may cycle back and forth through the cards as you wish. To post a card select the button on the bottom bar corresponding to the type of media you wish to send. (Message, Picture, Video) Choose a photo or video and add a caption, or simply type a message to the group and hit the upload button. Your postcard will then show up on the top of the stack for the rest of the group to see.
+
+### Account
+
+If you wish to change your password you may click the “Account” button at the top of the page and enter and confirm a new password. If you wish to sign out of Postcards, simply click the “Sign Out” button at the top right of the page.
+
+
 ## Sundown Plan
 Postcards allowed us to provide proof of concept for a clutter-free social media platform for users of any age to interact in a private and meaningful manner with their friends and families. We will not be continuing development of Postcards as our development team will be taking different paths after graduation.
 
